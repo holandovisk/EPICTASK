@@ -22,11 +22,11 @@ function gerarCard(tarefa) {
       ${tarefa.titulo}
     </div>
     <div class="card-body">
-      <p class="card-text">${tarefa.descricao}</p>
+      <p class="card-text"> Data: ${tarefa.descricao}</p>
       <p>
         <span class="badge text-bg-warning">${tarefa.categoria}</span>
       </p>
-      <p> ${tarefa.pontos}pts</p>
+      <p> Valor: R$${tarefa.pontos}</p>
       <a href="#" class="btn btn-success">
         <i class="bi bi-check-lg"></i>
       </a>
