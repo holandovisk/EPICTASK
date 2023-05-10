@@ -5,7 +5,7 @@ let lista_tarefas = []
 
 
 window.addEventListener("load", () => {
-  lista_tarefas = JSON.parse(localStorage.getItem("lista_tarefas"))
+  lista_tarefas = JSON.parse(localStorage.getItem("lista_tarefas")) || []
   lista_tarefas.forEach((tarefa)=> {
     document.querySelector("#tarefas").innerHTML += gerarCard(tarefa)
   })
