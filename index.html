@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gestor de finanças</title>
+  <title>Gestor de investimentos</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
@@ -15,7 +15,7 @@
 
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Gestor de finanças</a>
+      <a class="navbar-brand" href="#">Gestor de investimentos</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -49,7 +49,7 @@
   <div class="container">
     <!-- Button trigger modal -->
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-      Cadastrar Gasto
+      Cadastrar Investimento
     </button>
   </div>
 
@@ -58,6 +58,8 @@
     <div id="tarefas" class="row">
 
 
+    </div><div class="col-6">
+      <input id="pontos" type="number" class="form-control" placeholder="Valor investido" aria-label="pontos">
     </div>
     <!--row-->
   </div>
@@ -69,27 +71,33 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Cadastrar Gastos</h1>
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Cadastrar Investimentos</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <div class="row">
             <div class="col-12">
-              <input id="titulo" type="text" class="form-control" placeholder="O que foi" aria-label="Título">
+              <input id="titulo" type="text" class="form-control" placeholder="Qual o título?" aria-label="Título">
             </div>
             <div class="col-12">
               <input id="descricao" type="date" class="form-control" placeholder="Quando foi" aria-label="Descrição">
             </div>
             <div class="col-6">
-              <input id="pontos" type="number" value="0" class="form-control" placeholder="Valor" aria-label="pontos">
+              <input id="pontos" type="number" class="form-control" placeholder="Valor investido" aria-label="pontos">
+            </div>
+            <div class="col-6">
+              <input id="cota" type="number" class="form-control" placeholder="Valor da cota" aria-label="cota">
+            </div>
+            <div class="col-6">
+              <input id="qtd" type="number" class="form-control" placeholder="Qtd de cotas" aria-label="qtd">
             </div>
             <div class="col-6">
               <select id="categoria" class="form-select" aria-label="Default select example">
-                <option selected>Finalidade</option>
-                <option>Despesas de casa</option>
-                <option>Investimento</option>
-                <option>Lazer</option>
-                <option>Alimentação</option>
+                <option selected>Tipo de investimento</option>
+                <option>Renda Fixa</option>
+                <option>Renda Variável</option>
+                <option>Fundos Imobiliários</option>
+                <option>Cripto</option>
               </select>
             </div>
 

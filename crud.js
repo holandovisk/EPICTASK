@@ -18,12 +18,15 @@ function cadastrar() {
     let descricao = document.querySelector("#descricao").value
     let pontos = document.querySelector("#pontos").value
     let categoria = document.querySelector("#categoria").value
-
+    let cota = document.querySelector("#cota").value
+    let qtd = document.querySelector("#qtd").value
     const tarefa = {
         titulo,
         descricao,
         pontos,
         categoria,
+        cota,
+        qtd,
     }
     if (tarefa.titulo.length == 0 ){
       document.querySelector("#titulo").classList.add("is-invalid")
@@ -51,7 +54,9 @@ function gerarCard(tarefa) {
       <p>
         <span class="badge text-bg-warning">${tarefa.categoria}</span>
       </p>
-      <p> Valor: R$${tarefa.pontos}</p>
+      <p> Valor investido: R$${tarefa.pontos}</p>
+      <p> Valor da cota: R$${tarefa.cota} </p>
+      <p> Quantidade de cotas ${tarefa.qtd} cota(s) </p>
       <a href="#" class="btn btn-success">
         <i class="bi bi-check-lg"></i>
       </a>
